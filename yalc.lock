@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@midival/react-native": {
+      "signature": "d10f64f81697fcd5f463c7f29efa8d6a",
+      "file": true
+    }
+  }
+}

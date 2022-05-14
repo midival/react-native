@@ -68,6 +68,7 @@
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
+    "@midival/core": "^0.0.16",
     "react": "*",
     "react-native": "*"
   },
@@ -143,5 +144,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@hypersphere/omnibus": "^0.0.6"
   }
 }
