@@ -1,6 +1,6 @@
 {
   "name": "@midival/react-native",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "React Native bindings (iOS + Android) for MIDIVal library",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
