@@ -1,4 +1,5 @@
-import type { IMIDIInput, IMIDIOutput } from '@midival/core';
+import type { IMIDIInput, IMIDIOutput, UnregisterCallback } from '@midival/core';
+import type { IMIDIAccess } from "@midival/core/dist/wrappers/access/IMIDIAccess";
 import type { InputStateChangeCallback, OutputStateChangeCallback } from '@midival/core/dist/wrappers/access/IMIDIAccess';
 import { NativeEventEmitter, NativeModules } from 'react-native';
 import { CallbackType, Omnibus } from "@hypersphere/omnibus";
@@ -13,12 +14,24 @@ interface NativeMidiResponse {
     type: 'input' | 'output';
 }
 
-export class ReactNativeMIDIValAccess {
+export class ReactNativeMIDIValAccess implements IMIDIAccess {
     private listeners: Omnibus;
   constructor() {
     this.inputs = [];
     this.outputs = [];
     this.listeners = new Omnibus<Record<any, any>>();
+    }
+    onInputConnected(callback: InputStateChangeCallback): UnregisterCallback {
+        throw new Error('Method not implemented.');
+    }
+    onInputDisconnected(callback: InputStateChangeCallback): UnregisterCallback {
+        throw new Error('Method not implemented.');
+    }
+    onOutputConnected(callback: OutputStateChangeCallback): UnregisterCallback {
+        throw new Error('Method not implemented.');
+    }
+    onOutputDisconnected(callback: OutputStateChangeCallback): UnregisterCallback {
+        throw new Error('Method not implemented.');
     }
 
     private connectToEmmiter() {
@@ -58,9 +71,6 @@ export class ReactNativeMIDIValAccess {
             this.connectToEmmiter();
         });
     }
-
-
-
     inputs: IMIDIInput[];
     outputs: IMIDIOutput[];
     onInputStateChange(_callback: InputStateChangeCallback): void {

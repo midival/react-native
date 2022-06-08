@@ -9,6 +9,10 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "@emotion/native": "^11.0.0",
+    "@emotion/react": "^11.9.0",
+    "@midival/core": "^0.0.16",
+    "@react-native-community/picker": "^1.8.1",
     "react": "16.13.1",
     "react-native": "0.63.4"
   },
